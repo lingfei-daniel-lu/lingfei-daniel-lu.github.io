@@ -1,5 +1,9 @@
-# Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-
-remote_theme:     sighingnow/jekyll-gitbook
+  # Site settings
+  title: Lingfei Lu
+  SEOTitle: Lingfei Lu | HKUST
+  email: lingfei.lu@connect.ust.hk
+  description: "Lingfei Lu's Personal Website"
+  url: "lingfei-daniel-lu.github.io"
+  baseurl: ""
+  github_repo: "https://github.com/lingfei-daniel-lu/lingfei-daniel-lu.github.io.git"
+  theme: minima
