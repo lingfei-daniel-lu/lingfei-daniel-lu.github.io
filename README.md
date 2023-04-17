@@ -1,14 +1,12 @@
-# Lingfei Lu's Personal Website
-
-Hi, I am Lingfei, a Ph.D. candidate at the Department of Economics, The Hong Kong University of Science and Technology.
+Hi, I am Lingfei Lu, a Ph.D. candidate at the Department of Economics, The Hong Kong University of Science and Technology (HKUST).
 
 ## Education
 
-Ph.D. in Economics, The Hong Kong Univerisity of Science and Techonology (HKUST), 2022-now  
+Ph.D. in Economics, The Hong Kong Univerisity of Science and Techonology, 2022-now  
 
-M.Phil in Economics, The Hong Kong Univerisity of Science and Techonology (HKUST), 2020-2022  
+M.Phil in Economics, The Hong Kong Univerisity of Science and Techonology, 2020-2022  
 
-B.Sc. in Economics and Finance, The Hong Kong Univerisity of Science and Techonology (HKUST), 2016-2020  
+B.Sc. in Economics and Finance, The Hong Kong Univerisity of Science and Techonology, 2016-2020  
 
 
 ## Research Interest
