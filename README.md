@@ -2,7 +2,7 @@
 
 Hi, I am Lingfei, a Ph.D. candidate at the Department of Economics, The Hong Kong University of Science and Technology.
 
-## EDUCATION
+## Education
 
 Ph.D. in Economics, The Hong Kong Univerisity of Science and Techonology (HKUST), 2022-now
 M.Phil in Economics, The Hong Kong Univerisity of Science and Techonology (HKUST), 2020-2022
