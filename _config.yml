@@ -26,7 +26,7 @@ author:
   pronouns         : # example: "she/her"
   bio              : "Ph.D. Candidate in Economics"
   location         : "Hong Kong SAR, China"
-  employer         : "Hong Kong University of Science and Technology"
+  employer         : "HKUST"
   uri              : # URL
   email            : "lingfei.lu[at]connect.ust.hk"
 
@@ -37,7 +37,7 @@ author:
   orcid            : "https://orcid.org/0000-0002-8594-2763"
   semantic         : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Lingfei-Lu"
   scopus           : # URL
 
   # Repositories and software development
