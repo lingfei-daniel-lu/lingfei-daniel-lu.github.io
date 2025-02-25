@@ -11,10 +11,15 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Economics, The Hong Kong University of Science and Technology, 2026 (expected)
+  * Advisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk)
+  * Thesis Commitee Members: [Prof. Juanyi (Jenny) Xu](https://juanyixu.weebly.com), [Prof. Shang-Jin Wei](https://users.nber.org/~wei/)
+* M.Phil. in Economics, The Hong Kong University of Science and Technology, 2022
+  * Advisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk)
+* B.Sc. in Economics and Finance, The Hong Kong University of Science and Technology, 2020
+  * Minor in Mathematics and Humanities
 
+<!--
 Work experience
 ======
 * Spring 2024: Academic Pages Collaborator
@@ -62,3 +67,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+-->
