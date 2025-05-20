@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-You can download a PDF version of my [CV](https://yaoli.people.ust.hk)
+You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/cv).
 
 Education
 ======
