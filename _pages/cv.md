@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/cv).
+You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_CV.pdf).
 
 Education
 ======

@@ -61,7 +61,7 @@
       <p><i>Job Market Paper</i> </p>
     {% elsif post.status2 == 'in_progress' %}
       <p><i>In Progress</i> </p>
-    {% elsif post.collection == 'published_papers' %}
+    {% elsif post.collection == 'publications' %}
       <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'policy_papers' %}
       <!-- <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p> -->
@@ -97,9 +97,6 @@
   {% if post.wppaperurl %}
     [<a href="{{ post.wppaperurl }}">Draft</a>]
   {% endif %}
-  {% if post.wppaperurl_mphil %}
-    [<a href="{{ post.wppaperurl_mphil }}">Draft (MPhil Thesis Version)</a>]
-  {% endif %}
   {% if post.slidesurl %}
     [<a href="{{ post.slidesurl }}">Slides</a>]
   {% endif %}
@@ -114,13 +111,13 @@
   {% endif %}
   </p>
 
-  {% if post.citation and post.custom_excerpt and post.pubpaperurl %}
+  <!-- {% if post.citation and post.custom_excerpt and post.pubpaperurl %}
     Recommended citation: {{ post.citation }} {{ post.pubpaperurl }}
   {% elsif post.citation and post.custom_excerpt and post.wppaperurl %}
     Recommended citation: {{ post.citation }} {{ post.wppaperurl }}
   {% elsif post.citation and post.custom_excerpt %}
     Recommended citation: {{ post.citation }}
-  {% endif %}
+  {% endif %} -->
 
   </article>
 </div>
