@@ -37,3 +37,35 @@ author_profile: true
   </li>
 {% endfor %}
 </ol>
+
+<div style="margin-top: 2rem; text-align: center;">
+  <button id="expand-all-summaries" class="btn btn--primary" type="button">Expand all summaries</button>
+  <button id="collapse-all-summaries" class="btn btn--secondary" type="button" style="margin-left: 1rem;">Collapse all summaries</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var expandButton = document.getElementById('expand-all-summaries');
+    var collapseButton = document.getElementById('collapse-all-summaries');
+    if (expandButton) {
+      expandButton.addEventListener('click', function () {
+        var summaries = document.querySelectorAll('.research-summary');
+        summaries.forEach(function (summary) {
+          if (!summary.open) {
+            summary.open = true;
+          }
+        });
+      });
+    }
+    if (collapseButton) {
+      collapseButton.addEventListener('click', function () {
+        var summaries = document.querySelectorAll('.research-summary');
+        summaries.forEach(function (summary) {
+          if (summary.open) {
+            summary.open = false;
+          }
+        });
+      });
+    }
+  });
+</script>

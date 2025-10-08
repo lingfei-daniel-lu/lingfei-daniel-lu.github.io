@@ -12,6 +12,14 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign primary_link = post.pubpaperurl | default: post.wppaperurl %}
+{% assign abstract_text = post.abstract | default: post.excerpt %}
+{% assign abstract_text = abstract_text | strip %}
+{% assign summary_extra = post.summary_extra | default: "" %}
+{% assign summary_extra = summary_extra | strip %}
+{% assign summary_body = post.summary_body | default: post.content %}
+{% assign summary_body = summary_body | strip %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
@@ -27,97 +35,93 @@
       </div>
     {% endif %}
 
-    {% if post.custom_excerpt %}
-      <h3 class="archive__item-title" itemprop="headline" style="display: inline; margin-right: 5px;">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      </h3>
-    {% else %}
-      <h3 class="archive__item-title" itemprop="headline" style="display: inline; text-decoration: none; margin-right: 5px;">
+    <h3 class="archive__item-title" itemprop="headline" style="display: inline; margin-right: 5px;">
+      {% if primary_link %}
+        <a href="{{ primary_link }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
+      {% elsif post.link %}
+        <a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
+      {% else %}
         {{ title }}
-      </h3>
-    {% endif %}
-<!--     <span style="font-weight: normal; display: inline; font-size: 18px;">(joint with {{ post.coauthors }})</span> -->
+      {% endif %}
+    </h3>
     {% if post.coauthors %}
       <span style="font-weight: normal; display: inline; font-size: 18px;">
           (joint with {{ post.coauthors }})
       </span>
     {% endif %}
 
+    {% capture action_links %}
+      {% if post.pubpaperurl %}[<a href="{{ post.pubpaperurl }}" target="_blank" rel="noopener noreferrer">Publication</a>]{% endif %}
+      {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">Draft</a>]{% endif %}
+      {% if post.slidesurl %}[<a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
+      {% if post.opt0text and post.opt0url %}[<a href="{{ post.opt0url }}" target="_blank" rel="noopener noreferrer">{{ post.opt0text }}</a>]{% endif %}
+      {% if post.opt1text and post.opt1url %}[<a href="{{ post.opt1url }}" target="_blank" rel="noopener noreferrer">{{ post.opt1text }}</a>]{% endif %}
+      {% if post.opt2text and post.opt2url %}[<a href="{{ post.opt2url }}" target="_blank" rel="noopener noreferrer">{{ post.opt2text }}</a>]{% endif %}
+    {% endcapture %}
+    {% assign action_links = action_links | strip | replace: ']\r\n[', '] [' | replace: ']\n[', '] [' | replace: '][', '] [' %}
+
+    {% capture action_markup %}
+      {% if action_links != "" %}
+        <span class="research-actions" style="display: inline; font-size: 16px; margin-left: 8px;">{{ action_links }}</span>
+      {% endif %}
+    {% endcapture %}
+    {% assign action_markup = action_markup | strip %}
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-    {% if post.collection == 'teaching' %}
-      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.status2 == 'accepted' %}
-      <p>Accepted for publication in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.status2 == 'conditional_accepted' %}
-      <p>Accepted subject to revisions in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.status2 == 'revise_resubmit' %}
-      <p>Revise and Resubmit for <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.status2 == 'submitted' %}
-      <p><i>Submitted</i> </p>
-    {% elsif post.status2 == 'jmp' %}
-      <p><i>Job Market Paper</i> </p>
-    {% elsif post.status2 == 'in_progress' %}
-      <p><i>In Progress</i> </p>
-    {% elsif post.collection == 'publications' %}
-      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.collection == 'policy_papers' %}
-      <!-- <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p> -->
-    {% elsif post.collection == 'working_papers' %}
-      <!-- <p>Working Paper </p> -->
-    {% elsif post.collection == 'works_in_progress' %}
-      <!-- <p>In Progress </p> -->
-    {% elsif post.collection == 'resting_works' %}
-      <!-- <p>Resting Work </p> -->
-    {% elsif post.date %}
-      <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    {% capture status_markup %}
+      {% if post.collection == 'teaching' %}
+        <p>{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+      {% elsif post.status2 == 'accepted' %}
+        <p>Accepted for publication in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+      {% elsif post.status2 == 'conditional_accepted' %}
+        <p>Accepted subject to revisions in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+      {% elsif post.status2 == 'revise_resubmit' %}
+        <p>Revise and Resubmit for <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+      {% elsif post.status2 == 'submitted' %}
+        <p><i>Submitted</i>{{ action_markup }}</p>
+      {% elsif post.status2 == 'jmp' %}
+        <p><i>Job Market Paper</i>{{ action_markup }}</p>
+      {% elsif post.status2 == 'in_progress' %}
+        <p><i>In Progress</i>{{ action_markup }}</p>
+      {% elsif post.collection == 'publications' %}
+        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+      {% elsif post.date %}
+        <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>{{ action_markup }}</p>
+      {% endif %}
+    {% endcapture %}
+    {% assign status_markup = status_markup | strip %}
+
+    {% if status_markup != "" %}
+      {{ status_markup }}
     {% endif %}
+    
+    {% capture summary_content %}
+      {% if abstract_text != "" %}
+        {{ abstract_text | markdownify }}
+      {% endif %}
+      {% if post.doi %}
+        <p><strong>DOI:</strong> <a href="https://doi.org/{{ post.doi | remove: 'https://doi.org/' | remove: 'http://doi.org/' }}">{{ post.doi }}</a></p>
+      {% endif %}
+      {% if summary_extra != "" %}
+        {{ summary_extra | markdownify }}
+      {% endif %}
+      {% if summary_body != "" %}
+        {{ summary_body | markdownify }}
+      {% endif %}
+    {% endcapture %}
+    {% assign summary_content = summary_content | strip %}
 
-    {% if post.custom_excerpt and site.read_more != 'enabled' %}
-      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    {% elsif post.custom_excerpt and site.read_more == 'enabled' %}
-      <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% if summary_content != "" %}
+      <details class="research-summary">
+        <summary>Summary</summary>
+        <div class="research-summary__content">
+          {{ summary_content }}
+        </div>
+      </details>
     {% endif %}
-
-
-    <!-- {% if post.citation and post.pubpaperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.pubpaperurl }}"><u>{{ post.pubpaperurl }}</u></a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }} </p>
-    {% elsif post.pubpaperurl %}
-      <p>Download <a href=" {{ post.pubpaperurl }} "><u>here</u></a></p>
-    {% endif %} -->
-
-  <p>
-  {% if post.pubpaperurl %}
-    [<a href="{{ post.pubpaperurl }}">Publication</a>]
-  {% endif %}
-  {% if post.wppaperurl %}
-    [<a href="{{ post.wppaperurl }}">Draft</a>]
-  {% endif %}
-  {% if post.slidesurl %}
-    [<a href="{{ post.slidesurl }}">Slides</a>]
-  {% endif %}
-  {% if post.opt0text and post.opt0url %}
-    [<a href="{{ post.opt0url }}">{{ post.opt0text }}</a>]
-  {% endif %}
-  {% if post.opt1text and post.opt1url %}
-    [<a href="{{ post.opt1url }}">{{ post.opt1text }}</a>]
-  {% endif %}
-  {% if post.opt2text and post.opt2url %}
-    [<a href="{{ post.opt2url }}">{{ post.opt2text }}</a>]
-  {% endif %}
-  </p>
-
-  <!-- {% if post.citation and post.custom_excerpt and post.pubpaperurl %}
-    Recommended citation: {{ post.citation }} {{ post.pubpaperurl }}
-  {% elsif post.citation and post.custom_excerpt and post.wppaperurl %}
-    Recommended citation: {{ post.citation }} {{ post.wppaperurl }}
-  {% elsif post.citation and post.custom_excerpt %}
-    Recommended citation: {{ post.citation }}
-  {% endif %} -->
 
   </article>
 </div>
