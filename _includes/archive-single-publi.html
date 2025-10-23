@@ -20,6 +20,46 @@
 {% assign summary_body = post.summary_body | default: post.content %}
 {% assign summary_body = summary_body | strip %}
 
+{% assign pdf_url = post.pdfurl | default: "" %}
+{% assign pdf_url = pdf_url | strip %}
+{% if pdf_url == "" and post.slug %}
+  {% if post.collection == 'publications' or post.collection == 'working_papers' %}
+    {% assign pdf_basename = post.pdf_basename | default: post.slug %}
+    {% if pdf_basename != "" %}
+      {% assign pdf_url = "/files/" | append: pdf_basename | append: ".pdf" %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% assign slides_url = post.slidesurl | default: "" %}
+{% assign slides_url = slides_url | strip %}
+{% if slides_url == "" and post.slug %}
+  {% if post.collection == 'publications' or post.collection == 'working_papers' %}
+    {% assign slides_basename = post.slides_basename | default: post.slug %}
+    {% if slides_basename != "" %}
+      {% assign slides_url = "/files/" | append: slides_basename | append: "_slides.pdf" %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% assign slides_href = "" %}
+{% if slides_url != "" %}
+  {% if slides_url contains "://" %}
+    {% assign slides_href = slides_url %}
+  {% else %}
+    {% assign slides_href = slides_url | prepend: base_path %}
+  {% endif %}
+{% endif %}
+
+{% assign pdf_href = "" %}
+{% if pdf_url != "" %}
+  {% if pdf_url contains "://" %}
+    {% assign pdf_href = pdf_url %}
+  {% else %}
+    {% assign pdf_href = pdf_url | prepend: base_path %}
+  {% endif %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
@@ -51,9 +91,11 @@
     {% endif %}
 
     {% capture action_links %}
+      {% assign wppaper_label = post.wppaper_label | default: "Draft" %}
       {% if post.pubpaperurl %}[<a href="{{ post.pubpaperurl }}" target="_blank" rel="noopener noreferrer">Publication</a>]{% endif %}
-      {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">Draft</a>]{% endif %}
-      {% if post.slidesurl %}[<a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
+      {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">{{ wppaper_label }}</a>]{% endif %}
+      {% if pdf_href != "" %}[<a href="{{ pdf_href }}" target="_blank" rel="noopener noreferrer">PDF</a>]{% endif %}
+      {% if slides_href != "" %}[<a href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
       {% if post.opt0text and post.opt0url %}[<a href="{{ post.opt0url }}" target="_blank" rel="noopener noreferrer">{{ post.opt0text }}</a>]{% endif %}
       {% if post.opt1text and post.opt1url %}[<a href="{{ post.opt1url }}" target="_blank" rel="noopener noreferrer">{{ post.opt1text }}</a>]{% endif %}
       {% if post.opt2text and post.opt2url %}[<a href="{{ post.opt2url }}" target="_blank" rel="noopener noreferrer">{{ post.opt2text }}</a>]{% endif %}
@@ -83,7 +125,8 @@
       {% elsif post.status2 == 'submitted' %}
         <p><i>Submitted</i>{{ action_markup }}</p>
       {% elsif post.status2 == 'jmp' %}
-        <p><i>Job Market Paper</i>{{ action_markup }}</p>
+        {% assign jmp_year = post.jmp_year | default: "2025" %}
+        <p><i>Job Market Paper</i>, {{ jmp_year }}{{ action_markup }}</p>
       {% elsif post.status2 == 'in_progress' %}
         <p><i>In Progress</i>{{ action_markup }}</p>
       {% elsif post.collection == 'publications' %}
@@ -114,11 +157,35 @@
     {% endcapture %}
     {% assign summary_content = summary_content | strip %}
 
+    {% assign highlights_content = post.highlights | default: "" %}
+    {% assign highlights_content = highlights_content | strip %}
+
+    {% if highlights_content != "" %}
+      <details class="research-highlights">
+        <summary>Highlights</summary>
+        <div class="research-highlights__content">
+          {{ highlights_content | markdownify }}
+        </div>
+      </details>
+    {% endif %}
+
     {% if summary_content != "" %}
       <details class="research-summary">
         <summary>Summary</summary>
         <div class="research-summary__content">
           {{ summary_content }}
+        </div>
+      </details>
+    {% endif %}
+
+    {% assign presentation_content = post.presentation | default: "" %}
+    {% assign presentation_content = presentation_content | strip %}
+
+    {% if presentation_content != "" %}
+      <details class="research-presentation">
+        <summary>Presentation</summary>
+        <div class="research-presentation__content">
+          {{ presentation_content | markdownify }}
         </div>
       </details>
     {% endif %}

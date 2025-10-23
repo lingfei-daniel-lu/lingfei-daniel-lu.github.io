@@ -23,7 +23,7 @@ International Trade, International Finance, Empirical Macroeconomics, Chinese Ec
 
 Research Interests
 ======
-Global Firms, Trade Network, Import Sourcing, Financial Frictions, Exchange Rate, Monetary Policy
+Exchange Rate, Trade Network, Import Sourcing, Firm Dynamics, Financial Frictions, Monetary Policy
 
 Contact Information
 ======
