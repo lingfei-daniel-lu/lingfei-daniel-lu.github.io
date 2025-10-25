@@ -1,17 +1,17 @@
 ---
-date: 20/05/2025
+date: 24/10/2025
 collection: works_in_progress
 status2: 'jmp'
 permalink: /work_in_progress/Imp-Exp-ER_JMP
-title: "Import-Export Linkages and Natural Hedging of Exchange Rate Risk"
-excerpt: "This paper explores how import and export trade linkages can help firms hedge exchange rate risk. I provide empirical evidence that exchange rate shocks from the export market and the source of imports have opposite effects. Exchange rate movements at the destination of a firm's exports are offset by exchange rate movements at the source of imports, and thus import-export linkages help mitigate the impact of exchange rate shocks on export performance. I will further discuss multilateral exchange rate correlations, where a firm's mix of export markets and import sources will affect its effectiveness in hedging exchange rate risk. I will develop a trade model with nominal price and currency components. The exchange rate risk faced by a firm depends on its network of exports and imports."
+title: "Import-Export Linkages as a Channel for Exchange Rate Hedging"
+excerpt: "This paper shows that firms hedge exchange rate risk through their import–export linkages. Using Chinese customs micro data, I document that exchange rate shocks from import origins and export markets have opposite effects on export growth, and that these elasticities are markedly attenuated for two-way traders. Moreover, greater overlap between a firm's supplier and destination portfolios further dampens the shock transmission. I develop a quantitative trade framework with risk aversion under mean–variance trade-off. Multilateral currency covariance and firm network shares jointly shape exposure of price competitiveness and cost channels. In an exact-hat linear system, exchange rate uncertainty creates risk-adjusted pricing premia and reallocates firms' import shares toward currencies that offset revenue exposure. I also provide tractable counterfactual analyses on alternative trade structure and exchange rate environments."
 custom_excerpt: 'true'
-citation: 'Lingfei Lu. Import-Export Linkages and Natural Hedging of Exchange Rate Risk;  <i>In Progress</i> (2025).'
+citation: 'Lingfei Lu. Import-Export Linkages as a Channel for Exchange Rate Hedging;  <i>In Progress</i> (2025).'
 cv_citation_authors: 'Lingfei Lu'
 cv_citation_other: '<i>In Progress</i> (2025).'
 url_slug: 'Imp-Exp-ER_JMP'
 abstract: >-
-  This paper explores how import and export trade linkages can help firms hedge exchange rate risk. I provide empirical evidence that exchange rate shocks from the export market and the source of imports have opposite effects. Exchange rate movements at the destination of a firm's exports are offset by exchange rate movements at the source of imports, and thus import-export linkages help mitigate the impact of exchange rate shocks on export performance. I will further discuss multilateral exchange rate correlations, where a firm's mix of export markets and import sources will affect its effectiveness in hedging exchange rate risk. I will develop a trade model with nominal price and currency components. The exchange rate risk faced by a firm depends on its network of exports and imports.
+  This paper shows that firms hedge exchange rate risk through their import–export linkages. Using Chinese customs micro data, I document that exchange rate shocks from import origins and export markets have opposite effects on export growth, and that these elasticities are markedly attenuated for two-way traders. Moreover, greater overlap between a firm's supplier and destination portfolios further dampens the shock transmission. I develop a quantitative trade framework with risk aversion under mean–variance trade-off. Multilateral currency covariance and firm network shares jointly shape exposure of price competitiveness and cost channels. In an exact-hat linear system, exchange rate uncertainty creates risk-adjusted pricing premia and reallocates firms' import shares toward currencies that offset revenue exposure. I also provide tractable counterfactual analyses on alternative trade structure and exchange rate environments.
 presentation: |-
   - 2025.10 HKUST CEP Brownbag Seminar, Hong Kong, China
   - 2025.04 Columbia Student Research Breakfast, New York, USA
