@@ -21,7 +21,7 @@ highlights: |-
   - In opposite, greater sourcing diversity of importers reduces import ERPT.
   - We develop a model of bilateral negotiation to rationalize empirical patterns.
 presentation: |-
-  - 2025.8* Young Economist Society (YES) Annual Conference, Hohhot, China
-  - 2024.7* Global Economic Order and Regional Cooperation: Opportunities and Challenges, Shanghai, China
-  - 2024.3 Australasian Trade Workshop (ATW), Christchurch, New Zealand
+  - 2025* Young Economist Society (YES) Annual Conference, Hohhot, China
+  - 2024* Global Economic Order and Regional Cooperation conference at SUFE, Shanghai, China
+  - 2024 Australasian Trade Workshop (ATW), Christchurch, New Zealand
 ---

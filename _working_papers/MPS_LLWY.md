@@ -18,21 +18,22 @@ abstract: >-
   We find that an unanticipated tightening of US monetary policy tends to raise US import prices. This empirical "spill-back" pattern differs from the predictions of typical open-economy macro models. We also document a new empirical "spillover" effect: import prices of other countries also rise following an unexpected US monetary tightening. To understand the mechanism, we examine Chinese exporters and identify a borrowing cost channel - their liquidity conditions generally deteriorate after a US monetary tightening. Indeed, the output price response is greater for those firms facing higher borrowing costs or tighter liquidity conditions.
 doi: 10.3386/w33811
 presentation: |-
-  - 2025.8 World Congress of the Econometric Society (ESWC), Seoul, South Korea
-  - 2025.8 International Conference on Empirical Economics (ICEE) at PSU Altoona, Pittsburgh, USA
-  - 2025.7* Chinese Economists Society (CES) China Annual Conference, Guangzhou, China
-  - 2025.1* HKIMR-ECB-BOFIT Joint Conference, Hong Kong, China
-  - 2024.12 Annual Meeting of China Trade Research Group (CTRG), Hong Kong, China
-  - 2024.10* Melbourne Annual Macro Policy Meeting, Melbourne, Australia
-  - 2024.8* NBER Chinese Economy Working Group Meeting, Shenyang, China
-  - 2024.8 Asia Meeting of the Econometric Society (AMES) East & Southeast Asia, Ho Chi Minh City, Vietnam
-  - 2024.7* China International Conference in Finance, Beijing, China
-  - 2024.7* HKUST-Fudan-SMU Conference on International Economics, Hong Kong, China
-  - 2024.6* Asia Meeting of the Econometric Society (AMES) in China, Hangzhou, China
-  - 2024.6 Asian Finance Association (AsianFA) Conference, Macau, China
-  - 2024.6 International Association for Applied Econometrics (IAAE) Annual Conference, Xiamen, China
-  - 2024.6* NBER East Asian Seminar on Economics, Hong Kong, China
-  - 2024.4* International Economics Joint Conference, Shenzhen, China
-  - 2024.3* Australasian Trade Workshop (ATW), Christchurch, New Zealand
-  - 2024.3* Empirical Investigations in Trade and Investment (EITI) Conference, Jakata, Indonesia
+  - 2025 China Economics Annual (CEA) Conference, Beijing, China
+  - 2025 World Congress of the Econometric Society (ESWC), Seoul, South Korea
+  - 2025 International Conference on Empirical Economics (ICEE) at PSU Altoona, Pittsburgh, USA
+  - 2025* Chinese Economists Society (CES) China Annual Conference, Guangzhou, China
+  - 2025* HKIMR-ECB-BOFIT Joint Conference, Hong Kong, China
+  - 2024 China Trade Research Group (CTRG) Annual Meeting, Hong Kong, China
+  - 2024* Melbourne Annual Macro Policy Meeting, Melbourne, Australia
+  - 2024* NBER Chinese Economy Working Group Meeting, Shenyang, China
+  - 2024 Asia Meeting of the Econometric Society (AMES) East & Southeast Asia, Ho Chi Minh City, Vietnam
+  - 2024* China International Conference in Finance, Beijing, China
+  - 2024* HKUST-Fudan-SMU Conference on International Economics, Hong Kong, China
+  - 2024* Asia Meeting of the Econometric Society (AMES) in China, Hangzhou, China
+  - 2024 Asian Finance Association (AsianFA) Conference, Macau, China
+  - 2024 International Association for Applied Econometrics (IAAE) Annual Conference, Xiamen, China
+  - 2024* NBER East Asian Seminar on Economics, Hong Kong, China
+  - 2024* International Economics Joint Conference, Shenzhen, China
+  - 2024* Australasian Trade Workshop (ATW), Christchurch, New Zealand
+  - 2024* Empirical Investigations in Trade and Investment (EITI) Conference, Jakata, Indonesia
 ---

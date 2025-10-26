@@ -1,5 +1,5 @@
 ---
-date: 23/10/2025
+date: 27/10/2025
 collection: works_in_progress
 status2: 'in_progress'
 permalink: /works_in_progress/MPS2_LLY
