@@ -59,6 +59,11 @@
     {% assign pdf_href = pdf_url | prepend: base_path %}
   {% endif %}
 {% endif %}
+{% if post.collection == 'works_in_progress' %}
+  {% assign primary_link = nil %}
+{% else %}
+  {% assign primary_link = primary_link | default: pdf_href %}
+{% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -75,10 +80,11 @@
       </div>
     {% endif %}
 
+    {% assign allow_title_link = post.collection != 'works_in_progress' %}
     <h3 class="archive__item-title" itemprop="headline" style="display: inline; margin-right: 5px;">
-      {% if primary_link %}
+      {% if primary_link and allow_title_link %}
         <a href="{{ primary_link }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
-      {% elsif post.link %}
+      {% elsif post.link and allow_title_link %}
         <a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
       {% else %}
         {{ title }}
@@ -90,16 +96,18 @@
       </span>
     {% endif %}
 
-    {% capture action_links %}
-      {% assign wppaper_label = post.wppaper_label | default: "Draft" %}
-      {% if post.pubpaperurl %}[<a href="{{ post.pubpaperurl }}" target="_blank" rel="noopener noreferrer">Publication</a>]{% endif %}
-      {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">{{ wppaper_label }}</a>]{% endif %}
-      {% if pdf_href != "" %}[<a href="{{ pdf_href }}" target="_blank" rel="noopener noreferrer">PDF</a>]{% endif %}
-      {% if slides_href != "" %}[<a href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
-      {% if post.opt0text and post.opt0url %}[<a href="{{ post.opt0url }}" target="_blank" rel="noopener noreferrer">{{ post.opt0text }}</a>]{% endif %}
-      {% if post.opt1text and post.opt1url %}[<a href="{{ post.opt1url }}" target="_blank" rel="noopener noreferrer">{{ post.opt1text }}</a>]{% endif %}
-      {% if post.opt2text and post.opt2url %}[<a href="{{ post.opt2url }}" target="_blank" rel="noopener noreferrer">{{ post.opt2text }}</a>]{% endif %}
-    {% endcapture %}
+{% capture action_links %}
+  {% if post.collection != 'works_in_progress' %}
+    {% assign wppaper_label = post.wppaper_label | default: "Draft" %}
+    {% if post.pubpaperurl %}[<a href="{{ post.pubpaperurl }}" target="_blank" rel="noopener noreferrer">Publication</a>]{% endif %}
+    {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">{{ wppaper_label }}</a>]{% endif %}
+    {% if pdf_href != "" %}[<a href="{{ pdf_href }}" target="_blank" rel="noopener noreferrer">PDF</a>]{% endif %}
+    {% if slides_href != "" %}[<a href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
+    {% if post.opt0text and post.opt0url %}[<a href="{{ post.opt0url }}" target="_blank" rel="noopener noreferrer">{{ post.opt0text }}</a>]{% endif %}
+    {% if post.opt1text and post.opt1url %}[<a href="{{ post.opt1url }}" target="_blank" rel="noopener noreferrer">{{ post.opt1text }}</a>]{% endif %}
+    {% if post.opt2text and post.opt2url %}[<a href="{{ post.opt2url }}" target="_blank" rel="noopener noreferrer">{{ post.opt2text }}</a>]{% endif %}
+  {% endif %}
+{% endcapture %}
     {% assign action_links = action_links | strip | replace: ']\r\n[', '] [' | replace: ']\n[', '] [' | replace: '][', '] [' %}
 
     {% capture action_markup %}
@@ -121,7 +129,7 @@
       {% elsif post.status2 == 'conditional_accepted' %}
         <p>Accepted subject to revisions in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
       {% elsif post.status2 == 'revise_resubmit' %}
-        <p>Revise and Resubmit for <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+        <p>Revise and Resubmit for <strong><i>{{ post.venue }}</i></strong>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
       {% elsif post.status2 == 'submitted' %}
         <p><i>Submitted</i>{{ action_markup }}</p>
       {% elsif post.status2 == 'jmp' %}
@@ -130,7 +138,7 @@
       {% elsif post.status2 == 'in_progress' %}
         <p><i>In Progress</i>{{ action_markup }}</p>
       {% elsif post.collection == 'publications' %}
-        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
+        <p>Published in <strong><i>{{ post.venue }}</i></strong>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{{ action_markup }}</p>
       {% elsif post.date %}
         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>{{ action_markup }}</p>
       {% endif %}
