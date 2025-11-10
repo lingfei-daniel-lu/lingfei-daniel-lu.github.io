@@ -11,6 +11,8 @@ redirect_from:
 
 You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_CV.pdf).
 
+This is my short [biography in Chinese](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_bio_Chinese.pdf)
+
 Education
 ======
 * Ph.D. in Economics, The Hong Kong University of Science and Technology, 2026 (expected)

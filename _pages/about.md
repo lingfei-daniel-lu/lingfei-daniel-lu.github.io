@@ -15,7 +15,7 @@ I am a final-year PhD candidate from the [Department of Economics](https://econ.
 
 I received my Master of Philosophy in Economics and Bachelor of Science in Economics and Finance from [HKUST Business School](https://bm.hkust.edu.hk) in 2022 and 2020. I was a visiting scholar at [Columbia Business School](https://business.columbia.edu) of [Columbia University](https://www.columbia.edu) in 2025.
 
-**I will be on the job market in 2025-2026** and available for interviews. You can find my [CV](https://lingfei-daniel-lu.github.io/cv) here. Feel free to contact me if you are interested in my research!
+**I will be on the job market in 2025-2026** and available for interviews. You can find my [CV](https://lingfei-daniel-lu.github.io/cv) and [bio in Chinese](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_bio_Chinese.pdf) here. Feel free to contact me if you are interested in my research!
 
 Research Fields
 ======
@@ -27,4 +27,6 @@ Exchange Rate, Trade Network, Global Sourcing, Supply Chain, Financial Frictions
 
 Contact Information
 ======
-Email: lingfei.lu@connect.ust.hk
+Email: lingfei.lu[at]connect[dot]ust[dot]hk
+
+Mobile: +86 18011178187
