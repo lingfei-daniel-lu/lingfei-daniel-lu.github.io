@@ -14,10 +14,14 @@ You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/fi
 Education
 ======
 * Ph.D. in Economics, The Hong Kong University of Science and Technology, 2026 (expected)
-  * Advisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk) @HKUST
 * M.Phil. in Economics, The Hong Kong University of Science and Technology, 2022
 * B.Sc. in Economics and Finance, The Hong Kong University of Science and Technology, 2020
   * Minor in Mathematics and Humanities
+
+Reference
+======
+* PhD Advisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk) @HKUST
+* Recommenders: [Prof. Juanyi (Jenny) Xu](https://juanyixu.weebly.com) @HKUST, [Prof. Shang-Jin Wei](https://users.nber.org/~wei/) @Columbia
 
 <!--
 Work experience
