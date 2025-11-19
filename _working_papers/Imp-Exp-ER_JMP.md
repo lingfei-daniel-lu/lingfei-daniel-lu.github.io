@@ -14,6 +14,8 @@ output: true
 abstract: >-
   This paper shows that firms hedge exchange rate risk through their import–export linkages. Using Chinese customs micro data, I document that exchange rate shocks from import origins and export markets have opposite effects on export growth, and that these elasticities are markedly attenuated for two-way traders. Moreover, greater overlap between a firm's supplier and destination portfolios further dampens the shock transmission. I develop a tractable trade model with pricing-to-market exports and global sourcing of inputs. Multilateral currency covariance and firm network shares jointly shape exposure of price competitiveness and cost channels. For risk averse firms under mean–variance trade-off, exchange rate uncertainty creates risk-adjusted pricing premia and reallocates firms' import shares toward currencies that offset revenue exposure. I also provide counterfactual experiments to illustrate how natural hedging works in alternative trade structure and exchange rate environments.
 presentation: |-
+  - 2026 Australasian Trade Workshop (ATW), Melbourne, Australia (Scheduled)
+  - 2025 China Trade Research Group (CTRG) Annual Meeting, Beijing, China (Scheduled)
   - 2025 HKUST CEP Brownbag Seminar, Hong Kong, China
   - 2025 Columbia Student Research Breakfast, New York, USA
 ---
