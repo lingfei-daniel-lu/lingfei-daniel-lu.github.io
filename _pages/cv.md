@@ -22,8 +22,8 @@ Education
 
 Reference
 ======
-* PhD Advisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk) @HKUST
-* Recommenders: [Prof. Juanyi (Jenny) Xu](https://juanyixu.weebly.com) @HKUST, [Prof. Shang-Jin Wei](https://users.nber.org/~wei/) @Columbia
+* PhD Supervisor: [Prof. Yao Amber Li](https://yaoli.people.ust.hk) @HKUST
+* Recommenders: [Prof. Juanyi (Jenny) Xu](https://juanyixu.weebly.com) @HKUST, [Prof. Shang-Jin Wei](https://users.nber.org/~wei/) @Columbia, [Prof. David E. Cook](https://econ.hkust.edu.hk/faculty-and-staff/directory/davcook) @HKUST
 
 <!--
 Work experience
