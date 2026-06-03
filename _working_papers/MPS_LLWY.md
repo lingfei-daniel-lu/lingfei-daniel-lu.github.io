@@ -18,8 +18,10 @@ abstract: >-
   We find that an unanticipated tightening of US monetary policy tends to raise US import prices. This empirical "spill-back" pattern differs from the predictions of typical open-economy macro models. We also document a new empirical "spillover" effect: import prices of other countries also rise following an unexpected US monetary tightening. To understand the mechanism, we examine Chinese exporters and identify a borrowing cost channel - their liquidity conditions generally deteriorate after a US monetary tightening. Indeed, the output price response is greater for those firms facing higher borrowing costs or tighter liquidity conditions.
 doi: 10.3386/w33811
 presentation: |-
-  - 2025 China Economics Annual (CEA) Conference, Beijing, China
+  - 2025 China Economics Annual (CEA) Conference, Shanghai, China
   - 2025 World Congress of the Econometric Society (ESWC), Seoul, South Korea
+  - 2025 SNU-Yonsei Trade Workshop, Seoul, South Korea
+  - 2025 International Economics and Finance Society (IEFS) China Annual Conference, Beijing, China
   - 2025 International Conference on Empirical Economics (ICEE) at PSU Altoona, Pittsburgh, USA
   - 2025* Chinese Economists Society (CES) China Annual Conference, Guangzhou, China
   - 2025* HKIMR-ECB-BOFIT Joint Conference, Hong Kong, China
