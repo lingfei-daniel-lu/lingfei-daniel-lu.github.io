@@ -20,8 +20,8 @@ doi: 10.3386/w33811
 presentation: |-
   - 2025 China Economics Annual (CEA) Conference, Shanghai, China
   - 2025 World Congress of the Econometric Society (ESWC), Seoul, South Korea
-  - 2025 SNU-Yonsei Trade Workshop, Seoul, South Korea
-  - 2025 International Economics and Finance Society (IEFS) China Annual Conference, Beijing, China
+  - 2025* SNU-Yonsei Trade Workshop, Seoul, South Korea
+  - 2025* International Economics and Finance Society (IEFS) China Annual Conference, Beijing, China
   - 2025 International Conference on Empirical Economics (ICEE) at PSU Altoona, Pittsburgh, USA
   - 2025* Chinese Economists Society (CES) China Annual Conference, Guangzhou, China
   - 2025* HKIMR-ECB-BOFIT Joint Conference, Hong Kong, China

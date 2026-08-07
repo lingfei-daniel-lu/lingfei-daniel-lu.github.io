@@ -13,9 +13,13 @@ You can download a PDF version of my [CV](https://lingfei-daniel-lu.github.io/fi
 
 This is my short [biography in Chinese](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_bio_Chinese.pdf)
 
+Employment
+======
+* Assistant Professor of Finance, School of Finance, Renmin University of China, August 2026-present
+
 Education
 ======
-* Ph.D. in Economics, The Hong Kong University of Science and Technology, 2026 (expected)
+* Ph.D. in Economics, The Hong Kong University of Science and Technology, 2026
 * M.Phil. in Economics, The Hong Kong University of Science and Technology, 2022
 * B.Sc. in Economics and Finance, The Hong Kong University of Science and Technology, 2020
   * Minor in Mathematics and Humanities

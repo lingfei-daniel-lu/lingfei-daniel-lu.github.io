@@ -18,8 +18,10 @@ presentation: |-
   - 2026 Asia Pacific Trade Seminars (APTS), Hong Kong, China
   - 2026 Asia Meeting of the Econometric Society (AMES) in China, Hong Kong, China
   - 2026 Rocky Mountain Empirical Trade (RMET) Conference, Banff, Canada
+  - 2026 Shanghai University of Finance and Economics, College of Business, Shanghai, China
   - 2026 Australasian Trade Workshop (ATW), Melbourne, Australia
   - 2025 China Trade Research Group (CTRG) Annual Meeting, Beijing, China
+  - 2025 National Macroeconomics PhD Student Academic Forum, Xiamen, China
   - 2025 HKUST CEP Brownbag Seminar, Hong Kong, China
   - 2025 Columbia Student Research Breakfast, New York, USA
 ---
