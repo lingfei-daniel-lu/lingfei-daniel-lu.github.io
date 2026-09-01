@@ -7,24 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my personal website!
+I am an Assistant Professor of Finance at the [School of Finance](https://sf.ruc.edu.cn), [Renmin University of China](https://www.ruc.edu.cn). I received my Ph.D. in Economics from the [HKUST Business School](https://bm.hkust.edu.hk) in 2026, and I was a visiting scholar at [Columbia Business School](https://business.columbia.edu) in 2025. My research combines customs-level micro data with structural trade models to study exchange rates, global sourcing, and firm networks in international trade and finance.
 
-About Me
-======
-I am an Assistant Professor of Finance at the [School of Finance](https://sf.ruc.edu.cn), [Renmin University of China](https://www.ruc.edu.cn).
+**Research Interests:** Exchange Rates, Global Sourcing, Trade Networks, Financial Frictions, Trade Credit, Chinese Economy
 
-I received my PhD in Economics from [HKUST Business School](https://bm.hkust.edu.hk) in 2026. I also received my Master of Philosophy in Economics and Bachelor of Science in Economics and Finance from HKUST Business School in 2022 and 2020. I was a visiting scholar at [Columbia Business School](https://business.columbia.edu) of [Columbia University](https://www.columbia.edu) in 2025.
+You can find my [CV](/files/Lingfei_LU_CV.pdf) and [bio in Chinese](/files/Lingfei_LU_bio_Chinese.pdf) here. Feel free to contact me if you are interested in my research!
 
-You can find my [CV](https://lingfei-daniel-lu.github.io/cv) and [bio in Chinese](https://lingfei-daniel-lu.github.io/files/Lingfei_LU_bio_Chinese.pdf) here. Feel free to contact me if you are interested in my research!
-
-Research Fields
-======
-International Trade, International Finance, Empirical Macroeconomics, Development, Chinese Economy
-
-Research Interests
-======
-Exchange Rate, Trade Network, Global Sourcing, Supply Chain, Financial Frictions, Trade Credit, Monetary Policy, Risk Hedging
-
-Contact Information
-======
 Email: [lingfei.lu@ruc.edu.cn](mailto:lingfei.lu@ruc.edu.cn)

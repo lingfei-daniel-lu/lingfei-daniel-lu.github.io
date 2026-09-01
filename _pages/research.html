@@ -14,6 +14,11 @@ author_profile: true
 {% assign working_papers_only = site.working_papers | where_exp: "item", "item.status2 != 'in_progress'" %}
 {% assign works_in_progress = site.working_papers | where: "status2", "in_progress" %}
 
+<div class="research-summary-controls">
+  <button id="expand-all-summaries" class="btn btn--primary" type="button">Expand all summaries</button>
+  <button id="collapse-all-summaries" class="btn btn--secondary" type="button">Collapse all summaries</button>
+</div>
+
 <h2>Publications</h2>
 <ol class="research-list">
 {% for post in site.publications reversed %}
@@ -40,10 +45,5 @@ author_profile: true
   </li>
 {% endfor %}
 </ol>
-
-<div class="research-summary-controls">
-  <button id="expand-all-summaries" class="btn btn--primary" type="button">Expand all summaries</button>
-  <button id="collapse-all-summaries" class="btn btn--secondary" type="button">Collapse all summaries</button>
-</div>
 
 <script src="{{ base_path }}/assets/js/research-summaries.js" defer></script>
