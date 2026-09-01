@@ -1,0 +1,21 @@
+/* Custom styles for personal content, kept separate from the vendored theme. */
+
+/* Research page: ordered lists of papers */
+.research-list {
+  padding-left: 20px;
+
+  .research-list__item {
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Research page: expand/collapse-all buttons */
+.research-summary-controls {
+  margin-top: 2rem;
+  text-align: center;
+
+  .btn--secondary {
+    margin-left: 1rem;
+  }
+}

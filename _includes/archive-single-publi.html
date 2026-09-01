@@ -59,7 +59,7 @@
     {% assign pdf_href = pdf_url | prepend: base_path %}
   {% endif %}
 {% endif %}
-{% if post.collection == 'works_in_progress' %}
+{% if post.status2 == 'in_progress' %}
   {% assign primary_link = nil %}
 {% else %}
   {% assign primary_link = primary_link | default: pdf_href %}
@@ -80,7 +80,7 @@
       </div>
     {% endif %}
 
-    {% assign allow_title_link = post.collection != 'works_in_progress' %}
+    {% assign allow_title_link = post.status2 != 'in_progress' %}
     <h3 class="archive__item-title" itemprop="headline" style="display: inline; margin-right: 5px;">
       {% if primary_link and allow_title_link %}
         <a href="{{ primary_link }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
@@ -97,7 +97,7 @@
     {% endif %}
 
 {% capture action_links %}
-  {% if post.collection != 'works_in_progress' %}
+  {% if post.status2 != 'in_progress' %}
     {% assign wppaper_label = post.wppaper_label | default: "Draft" %}
     {% if post.pubpaperurl %}[<a href="{{ post.pubpaperurl }}" target="_blank" rel="noopener noreferrer">Publication</a>]{% endif %}
     {% if post.wppaperurl %}[<a href="{{ post.wppaperurl }}" target="_blank" rel="noopener noreferrer">{{ wppaper_label }}</a>]{% endif %}

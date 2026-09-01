@@ -51,14 +51,14 @@ layout: default
           <p>Reject and Resubmit for <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.status2 == 'submitted' %}
           <p><i>Submitted</i> </p>
+        {% elsif page.status2 == 'in_progress' %}
+          <p><i>In Progress</i> </p>
         {% elsif page.collection == 'publications' %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.collection == 'policy_papers' %}
           <p><i>Policy Papers</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.collection == 'working_papers' %}
           <p><i>Working Paper</i> </p>
-        {% elsif page.collection == 'works_in_progress' %}
-          <p><i>In Progress</i> </p>
         {% elsif page.collection == 'resting_works' %}
           <p><i>Resting Work</i> </p>
         {% elsif page.date %}

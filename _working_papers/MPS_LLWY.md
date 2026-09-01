@@ -1,6 +1,5 @@
 ---
-date: 25/10/2025
-collection: working_papers
+date: 2025-10-25
 permalink: /working_papers/MPS_LLWY
 status2: 'revise_resubmit'
 venue: 'Journal of Monetary Economics'
