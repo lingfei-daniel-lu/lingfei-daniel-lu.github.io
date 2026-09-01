@@ -27,6 +27,4 @@ Exchange Rate, Trade Network, Global Sourcing, Supply Chain, Financial Frictions
 
 Contact Information
 ======
-Email: lingfei.lu[at]connect[dot]ust[dot]hk
-
-Mobile: +86 18011178187
+Email: [lingfei.lu@ruc.edu.cn](mailto:lingfei.lu@ruc.edu.cn)
